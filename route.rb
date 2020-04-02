@@ -9,7 +9,6 @@ require_relative('instance_counter')
 class Route
   attr_reader :first, :last, :stations
   include InstanceCounter
-  self.instance ||= 0
 
   def initialize(first, last)
     @first = first

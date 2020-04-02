@@ -8,6 +8,7 @@ module InstanceCounter
     attr_accessor :instance
 
     def instance_set
+      self.instance ||= 0
       self.instance += 1
     end
 

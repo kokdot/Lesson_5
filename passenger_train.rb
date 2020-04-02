@@ -3,7 +3,7 @@ require_relative('instance_counter')
 
 class PassengerTrain < Train
   include InstanceCounter
-  self.instance ||= 0
+
   def initialize(number)
     super(number)
     register_instance
