@@ -10,6 +10,7 @@ class Station
   include InstanceCounter
   attr_reader :name
   @@stations = []
+  self.instance ||= 0
 
   def initialize(name)
     @name = name

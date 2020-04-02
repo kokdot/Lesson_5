@@ -8,7 +8,9 @@ require_relative('instance_counter')
 # Может выводить список всех станций по-порядку от начальной до конечной
 class Route
   attr_reader :first, :last, :stations
-    include InstanceCounter
+  include InstanceCounter
+  self.instance ||= 0
+
   def initialize(first, last)
     @first = first
     @last = last

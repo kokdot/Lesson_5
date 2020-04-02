@@ -5,15 +5,14 @@ module InstanceCounter
   end
 
   module ClassMethods
-
-    @@instance ||= 0
+    attr_accessor :instance
 
     def instance_set
-      @@instance += 1
+      self.instance += 1
     end
 
     def instances
-      @@instance
+      self.instance
     end
   end
 
